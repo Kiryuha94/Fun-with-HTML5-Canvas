@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.strokeStyle = `hsl(${colorPiker}, 100%, 50%)`
     ctx.moveTo(e.clientX, e.clientY)
     ctx.stroke()
-   
     colorPiker++
-
     if (ctx.lineWidth > 80 || ctx.lineWidth < 5) isMaxSize = !isMaxSize
     isMaxSize ? ctx.lineWidth-- : ctx.lineWidth++
   }
