@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.querySelector('#canvas'),
+  SIZE = {
+    maxSize : 80,
+    minSize : 5
+  },
     ctx = canvas.getContext('2d');
   let isMouseDown = false,
     colorPiker = 0,
@@ -22,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.moveTo(e.clientX, e.clientY);
     ctx.stroke();
     colorPiker++;
-    if (ctx.lineWidth > 80 || ctx.lineWidth < 5) isMaxSize = !isMaxSize;
+    if (ctx.lineWidth > SIZE.maxSize || ctx.lineWidth < SIZE.minSize) isMaxSize = !isMaxSize;
     isMaxSize ? ctx.lineWidth-- : ctx.lineWidth++;
   };
 
