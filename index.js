@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.querySelector('#canvas'),
-  SIZE = {
-    maxSize : 80,
-    minSize : 5
-  },
+    SIZE = {
+      maxSize: 80,
+      minSize: 5,
+    },
     ctx = canvas.getContext('2d');
   let isMouseDown = false,
     colorPiker = 0,
